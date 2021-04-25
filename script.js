@@ -21,7 +21,7 @@ async function getQuotes() {
 function newQuote() {
     let random = Math.floor(Math.random() * apiQuotes.length);
     const {author,text} = apiQuotes[random];
-    authorText.textContent = author;
+    authorText.textContent = author ?? "Unknown" ;
     quoteEl.textContent = text;
 }
 
